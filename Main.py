@@ -19,6 +19,11 @@ def getInputPath():
     print("入力画像フォルダのパス")
     i_path = input(">> ")
 
+    # パスが見つからないとき
+    if not os.path.exists(i_path):
+        print("There is no such a directory")
+        exit()
+
     return i_path
 
 
