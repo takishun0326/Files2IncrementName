@@ -9,9 +9,9 @@ def renameFiles(input_path, ZERO_PADDING):
 
         # ファイル名と拡張子に分割
         root, ext = os.path.splitext(file)
-
+ 
         file_name = str(i).zfill(ZERO_PADDING) + ext
-        print(file_name)
+        print(file + " -> " +file_name)
         os.rename(os.path.join(input_path, file), os.path.join(input_path, file_name))
 
 def getInputPath():
